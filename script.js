@@ -1,5 +1,3 @@
-// script.js
-
 // Object to hold the chapters for each subject
 const chapters = {
   math: ["Algebra", "Geometry", "Calculus"],
@@ -55,4 +53,14 @@ downloadButton.addEventListener('click', function() {
   } else {
     alert("Please select both a subject and a chapter to download.");
   }
+});
+
+  //hamburger 
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('active'); // Toggle the 'active' class
+  });
 });
