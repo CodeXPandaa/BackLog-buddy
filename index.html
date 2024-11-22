@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Download Notes</title>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" width="40" height="40">
+      MyNotes
+    </div>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>🔍</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Download Notes</h1>
+    <div>
+      <label for="subject">Select Subject:</label>
+      <select id="subject">
+        <option value="">--Choose a Subject--</option>
+        <option value="math">Math</option>
+        <option value="physics">Physics</option>
+        <option value="chemistry">Chemistry</option>
+      </select>
+    </div>
+    <div>
+      <label for="chapter">Select Chapter:</label>
+      <select id="chapter" disabled>
+        <option value="">--Choose a Chapter--</option>
+      </select>
+    </div>
+    <button id="download-btn" disabled>Download</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Navigation Bar */
+.navbar {
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  flex-wrap: wrap; /* Wraps content for responsiveness */
+}
+
+/* Logo */
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4facfe;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .logo img {
+  max-width: 160px; /* Increased width */
+  height: auto;
+  width: 150px;
+  margin-right: 20px; /* Adjust spacing between logo and other elements */
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+  margin-right: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4facfe;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: rgba(79, 172, 254, 0.1);
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-right: 20px;
+  flex-grow: 1; /* Allows the search bar to adapt */
+  max-width: 300px; /* Limits the size */
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  border: none;
+  background: #4facfe;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #4facfe;
+  border-radius: 2px;
+}
+
+/* Dropdown Container */
+.container {
+  margin-top: 80px; /* To avoid overlap with navbar */
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Styling for both dropdowns */
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dropdown Hover Effects */
+select:hover {
+  border-color: #4facfe;
+  box-shadow: 0 4px 12px rgba(0, 172, 254, 0.3);
+}
+
+/* Styling for the Download Button */
+#download-btn {
+  padding: 10px 20px;
+  border: none;
+  background: #4facfe;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+#download-btn:hover {
+  background-color: #00f2fe;
+  box-shadow: 0 4px 12px rgba(0, 242, 254, 0.3);
+}
+
+/* Disable Button */
+#download-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
