@@ -1,57 +1,58 @@
-// Subject and chapter data
+// script.js
+
+// Object to hold the chapters for each subject
 const chapters = {
-  math: ["algebra", "geometry", "calculus"],
-  physics: ["mechanics", "optics", "thermodynamics"],
-  chemistry: ["organic-chemistry", "inorganic-chemistry", "physical-chemistry"],
+  math: ["Algebra", "Geometry", "Calculus"],
+  physics: ["Mechanics", "Thermodynamics", "Electromagnetism"],
+  chemistry: ["Organic Chemistry", "Inorganic Chemistry", "Physical Chemistry"]
 };
 
+// Get references to the DOM elements
 const subjectDropdown = document.getElementById('subject');
 const chapterDropdown = document.getElementById('chapter');
 const downloadButton = document.getElementById('download-btn');
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
 
-// Populate chapter dropdown based on selected subject
-subjectDropdown.addEventListener('change', () => {
-  const subject = subjectDropdown.value;
-
+// Event listener for subject dropdown change
+subjectDropdown.addEventListener('change', function() {
+  const selectedSubject = this.value;
+  
+  // Clear the chapter dropdown
   chapterDropdown.innerHTML = '<option value="">--Choose a Chapter--</option>';
-
-  if (subject) {
-    chapters[subject].forEach((chapter) => {
+  
+  if (selectedSubject) {
+    // Populate the chapter dropdown based on selected subject
+    chapters[selectedSubject].forEach(chapter => {
       const option = document.createElement('option');
-      option.value = chapter;
-      option.textContent = chapter.replace(/-/g, ' ').toUpperCase();
+      option.value = chapter.toLowerCase().replace(/\s+/g, '-'); // Convert chapter name to a URL-friendly format
+      option.textContent = chapter;
       chapterDropdown.appendChild(option);
     });
+    
+    // Enable the chapter dropdown
     chapterDropdown.disabled = false;
-    downloadButton.disabled = true;
   } else {
     chapterDropdown.disabled = true;
-    downloadButton.disabled = true;
   }
+  
+  // Disable the download button until a chapter is selected
+  downloadButton.disabled = true;
 });
 
-// Enable download button only if a chapter is selected
-chapterDropdown.addEventListener('change', () => {
-  downloadButton.disabled = !chapterDropdown.value;
+// Event listener for chapter dropdown change
+chapterDropdown.addEventListener('change', function() {
+  // Enable the download button if a chapter is selected
+  downloadButton.disabled = !this.value;
 });
 
-// Handle download
-downloadButton.addEventListener('click', () => {
-  const subject = subjectDropdown.value;
-  const chapter = chapterDropdown.value;
-
-  if (subject && chapter) {
-    // Construct the download URL
-    const downloadUrl = `/download?subject=${subject}&chapter=${chapter}`;
-    window.location.href = downloadUrl; // Trigger download
+// Event listener for download button click
+downloadButton.addEventListener('click', function() {
+  const selectedSubject = subjectDropdown.value;
+  const selectedChapter = chapterDropdown.value;
+  
+  if (selectedSubject && selectedChapter) {
+    const downloadUrl = `downloads/${selectedSubject}/${selectedChapter}.pdf`; // Adjust the URL as needed
+    window.location.href = downloadUrl; // Simulate a download
   } else {
-    alert('Please select both subject and chapter!');
+    alert("Please select both a subject and a chapter to download.");
   }
-});
-
-// Toggle navbar for mobile
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
 });
