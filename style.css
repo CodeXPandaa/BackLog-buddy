@@ -115,6 +115,7 @@ body {
 /* Dropdown Container */
 .container {
   margin-top: 80px; /* To avoid overlap with navbar */
+  margin-bottom: 80px;
   padding: 20px;
   background: #fff;
   border-radius: 10px;
@@ -195,4 +196,95 @@ select:hover {
   .hamburger {
     display: flex;
   }
+}
+
+
+
+
+
+
+.footer {
+  background: #2c3e50; /* Set background color to black */
+  color: #ecf0f1; /* Set text color to white for contrast */
+  padding: 20px 0;
+  width: 100%; /* Make the footer full width */
+  position: relative; /* Ensure it positions correctly */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  bottom: 0; /* Align to the bottom */
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Ensure content takes full width */
+  max-width: 1200px; /* Keep max-width for content alignment */
+  margin: 0 auto; /* Center the content */
+  padding: 20px;
+}
+
+.footer-logo img {
+  max-width: 150px; /* Adjust based on your logo size */
+  height: auto;
+  transform: scale(1.2);
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  
+}
+
+.footer-contact img {
+  margin-right: 10px; /* Space between icon and text */
+  transition: transform 0.3s ease; /* Transition for contact icons */
+}
+
+.footer-contact img:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  color: white; /* Ensure contact text is white */
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transition for scaling and opacity */
+}
+
+.social-links a:hover {
+  transform: scale(1.2); /* Scale effect on hover */
+  opacity: 0.8; /* Slightly fade on hover */
+}
+
+
+.social-links img {
+  width: 24px; /* Icon size */
+  height: 24px; /* Icon size */
+  transition: transform 0.3s;
+}
+
+.social-links img:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+.footer-bottom {
+  margin-top: 20px; /* Space above bottom text */
+  font-size: 14px; /* Smaller font size */
+  color: #bdc3c7; /* Lighter text color */
+  transition: color 0.3s ease;
+}
+.footer-bottom:hover {
+  color: #ecf0f1; /* Change color on hover */
 }
