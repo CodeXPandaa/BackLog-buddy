@@ -3,7 +3,7 @@
 }
 /* General Styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
   background: linear-gradient(to right, #4facfe, #00f2fe);
@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Navigation Bar */
@@ -198,45 +199,38 @@ select:hover {
   }
 }
 
-
-
-
-
-
 .footer {
-  background: #2c3e50; /* Set background color to black */
-  color: #ecf0f1; /* Set text color to white for contrast */
-  padding: 20px 0;
-  width: 100%; /* Make the footer full width */
-  position: relative; /* Ensure it positions correctly */
-  left: 0; /* Align to the left */
-  right: 0; /* Align to the right */
-  bottom: 0; /* Align to the bottom */
-  text-align: center;
+  background-color: #282c34; /* Dark background */
+  color: #ffffff; /* White text */
+  padding: 20px; /* Add some padding */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items */
+  text-align: center; /* Center text */
+  width: 100vw; /* Full width of the viewport */
+  position: relative; /* Keep it relative to the document flow */
+  left: 0; /* Align it to the left */
+  right: 0; /* Align it to the right */
+  margin: 0; /* Remove any default margin */
 }
 
+/* Footer Content */
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%; /* Ensure content takes full width */
-  max-width: 1200px; /* Keep max-width for content alignment */
-  margin: 0 auto; /* Center the content */
-  padding: 20px;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items */
+  margin-bottom: 20px; /* Space between content and bottom */
 }
 
+/* Footer Logo */
 .footer-logo img {
-  max-width: 150px; /* Adjust based on your logo size */
-  height: auto;
-  transform: scale(1.2);
+  max-width: 250px; /* Limit logo size */
+  height: auto; /* Maintain aspect ratio */
 }
 
+/* Contact Information */
 .footer-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0;
-  
+  margin: 10px 0; /* Space between contact items */
 }
 
 .footer-contact img {
@@ -254,9 +248,10 @@ select:hover {
 }
 
 .social-links {
-  display: flex;
-  gap: 15px;
-  margin-top: 10px;
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items */
+  gap: 15px; /* Space between icons */
+  margin-top: 10px; /* Space above social links */
 }
 
 .social-links a {
@@ -268,6 +263,12 @@ select:hover {
   opacity: 0.8; /* Slightly fade on hover */
 }
 
+/* Social Icons */
+.social-links img {
+  width: 24px; /* Set a uniform size for icons */
+  height: 24px; /* Set a uniform size for icons */
+  transition: transform 0.3s; /* Add a transition effect */
+}
 
 .social-links img {
   width: 24px; /* Icon size */
@@ -287,4 +288,17 @@ select:hover {
 }
 .footer-bottom:hover {
   color: #ecf0f1; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (min-width: 600px) {
+  .footer-content {
+    flex-direction: row; /* Change to row layout on larger screens */
+    justify-content: space-between; /* Space out items */
+    width: 100%; /* Full width */
+  }
+
+  .footer-contact {
+    text-align: left; /* Align text to the left */
+  }
 }
