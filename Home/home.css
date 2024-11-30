@@ -1,8 +1,9 @@
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
   gap: 20px; /* Space between cards */
   padding: 20px;
+  overflow: hidden; /* Hide overflow during animation */
 }
 
 .card {
@@ -11,36 +12,82 @@
   border-radius: 8px; /* Rounded corners */
   text-align: center; /* Center text */
   padding: 15px; /* Padding inside the card */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Initial shadow effect */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for transform and shadow */
+  position: relative; /* Position for pseudo-element */
+  opacity: 0; /* Start hidden for entrance animation */
+  transform: translateY(-50px); /* Start above the view */
+  animation: fallIn 0.5s forwards; /* Entrance animation */
+}
+
+/* Adding a delay for each card */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fallIn {
+  0% {
+    opacity: 0; /* Start hidden */
+    transform: translateY(-50px); /* Start above */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Settle in place */
+  }
+}
+
+/* Hover effect for desktop */
+.card:hover {
+  transform: translateY(-5px) rotate(2deg) scale(1.03); /* Lift, rotate, and scale effect on hover */
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5); /* Glow effect on hover */
+}
+
+/* Active effect for mobile and tablets */
+.card:active {
+  transform: translateY(-5px) rotate(2deg) scale(1.03); /* Lift and scale effect on tap */
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5); /* Glow effect on tap */
 }
 
 .card img {
   max-width: 100%; /* Responsive image */
-  width: 350px;
+  width: 300px;
   height: auto; /* Maintain aspect ratio */
   border-radius: 5px; /* Rounded corners for image */
+  transition: transform 0.3s; /* Smooth transition for image scaling */
+}
+
+.card img:hover {
+  transform: scale(1.05); /* Slightly enlarge image on hover */
 }
 
 .card h3 {
   margin: 10px 0; /* Space above and below heading */
 }
 
-.card button {
-  background-color: #007BFF; /* Button background color */
-  color: white; /* Button text color */
+.card a.button {
+  display: inline-block; /* Make it an inline-block for better control */
+  background: linear-gradient(90deg, #007BFF, #0056b3); /* Blue gradient background */
+  color: white; /* Text color */
   border: none; /* Remove border */
-  padding: 10px 15px; /* Button padding */
-  border-radius: 5px; /* Rounded corners for button */
-  cursor: pointer; /* Pointer cursor on hover */
+  padding: 12px 30px; /* Button padding */
+  border-radius: 50px; /* Pill shape */
+  font-size: 16px; /* Font size */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  transition: transform 0.3s ease, background 0.3s ease; /* Smooth transitions */
 }
 
-.card button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+.card a.button:hover {
+  background: linear-gradient(90deg, #0056b3, #004494); /* Darker blue gradient on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
 }
 
-
-
-
+.card a.button:active {
+  transform: scale(0.95); /* Slightly shrink button when clicked */
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
