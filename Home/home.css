@@ -1,0 +1,56 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff; /* Card background color */
+  border: 1px solid #ddd; /* Card border */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center; /* Center text */
+  padding: 15px; /* Padding inside the card */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.card img {
+  max-width: 100%; /* Responsive image */
+  width: 350px;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded corners for image */
+}
+
+.card h3 {
+  margin: 10px 0; /* Space above and below heading */
+}
+
+.card button {
+  background-color: #007BFF; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Button padding */
+  border-radius: 5px; /* Rounded corners for button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.card button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+}
