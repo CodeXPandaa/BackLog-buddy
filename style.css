@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 
 * {
   box-sizing: border-box; /* Include padding and border in element's total width and height */
@@ -33,7 +32,6 @@ body {
   z-index: 1000;
   flex-wrap: wrap; /* Wraps content for responsiveness */
   overflow: hidden; /* Prevents horizontal scroll */
-
 }
 
 .navbar .logo,
@@ -44,7 +42,6 @@ body {
   transform: translateX(50px); /* Start position to the right */
   animation: slideInRight 0.8s forwards; /* Animation for each navbar element */
 }
-
 
 /* Logo */
 .navbar .logo {
@@ -304,7 +301,6 @@ select:hover {
   font-size: 14px; /* Smaller font size */
   color: #bdc3c7; /* Lighter text color */
   transition: color 0.3s ease;
-  
 }
 .footer-bottom:hover {
   color: #ecf0f1; /* Change color on hover */
@@ -322,42 +318,6 @@ select:hover {
     text-align: left; /* Align text to the left */
   }
 }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .get-started-container {
   display: flex; /* Use flexbox to create two columns */
@@ -400,7 +360,6 @@ select:hover {
   }
 }
 
-
 .panda-image img {
   width: 400px; /* Set the width to 400px */
   height: auto; /* Maintain aspect ratio */
@@ -411,7 +370,6 @@ select:hover {
   padding-bottom: 0; /* Adjust bottom padding */
   padding-left: 0; /* Adjust left padding */
   padding-right: 0; /* Adjust right padding if needed */
-
 }
 
 .h2 {
@@ -488,9 +446,6 @@ select:hover {
 .get-started-button:hover {
   background-color: #0056b3; /* Darker shade on hover */
 }
-
-
-
 
 /* Responsive Styles */
 @media (max-width: 768px) {
