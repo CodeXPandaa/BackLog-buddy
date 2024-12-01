@@ -35,7 +35,6 @@
         <span></span>
         <span></span>
         <span></span>
-        <span></span>
       </div>
       <div class="nav-links">
         <a href="index.html">Home</a>
@@ -72,7 +71,7 @@
     <div class="container" id="dialog-box">
       <h1>Download Notes</h1>
       <div>
-        <label for="subject">Select Subject:</label>
+        
         <select id="subject">
           <option value="">--Choose a Subject--</option>
           <option value="math">Math</option>
@@ -81,7 +80,7 @@
         </select>
       </div>
       <div>
-        <label for="chapter">Select Chapter:</label>
+        
         <select id="chapter" disabled>
           <option value="">--Choose a Chapter--</option>
         </select>
@@ -95,6 +94,14 @@
         <div class="footer-logo">
           <img src="img/logo-removebg.png" alt="Backlog Buddy Logo" />
         </div>
+    <!-- Middle Block: Feedback Form -->
+    <div class="footer-feedback">
+      <h3>Feedback</h3>
+      <form id="feedback-form" name="feedback" netlify>
+        <textarea id="suggestion" rows="4" placeholder="Write your suggestion here..." type="text" name="suggestion"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
         <div class="footer-contact">
           <p>
             <img

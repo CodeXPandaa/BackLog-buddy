@@ -64,3 +64,32 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks.classList.toggle('active'); // Toggle the 'active' class
   });
 });
+
+
+
+
+
+// Function to show the dialog box
+function showDialog() {
+  const dialogBox = document.getElementById('dialog-box'); // Assuming your dialog box has this ID
+  dialogBox.classList.add('animate'); // Add the animation class
+  dialogBox.style.display = 'block'; // Show the dialog box (make sure it's set to 'none' initially in CSS)
+}
+
+// Call this function when you want to show the dialog box
+// For example, you can call it when the "Get Started" button is clicked
+document.querySelector('.get-started-button').addEventListener('click', showDialog);
+
+
+
+
+// Function to trigger button animation
+function animateButton() {
+  const downloadButton = document.getElementById('download-btn');
+  downloadButton.classList.remove('bounce'); // Remove the class to reset animation
+  void downloadButton.offsetWidth; // Trigger reflow to restart the animation
+  downloadButton.classList.add('bounce'); // Add the class to start animation
+}
+
+// Add event listener to the download button
+document.getElementById('download-btn').addEventListener('click', animateButton);
