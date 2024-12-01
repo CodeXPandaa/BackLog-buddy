@@ -15,7 +15,14 @@ body {
   align-items: center;
   min-height: 100vh;
   overflow-x: hidden;
+  cursor:url('imresizer-1733090301850.png'), auto;
+  
 }
+.button, .nav-links a,a ,button{
+  cursor: url('imresizer-1733090301850.png'), auto; /* Same custom cursor for buttons and links */
+}
+
+
 
 /* Navigation Bar */
 .navbar {
