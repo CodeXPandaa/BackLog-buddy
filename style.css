@@ -33,7 +33,36 @@ body {
   z-index: 1000;
   flex-wrap: wrap; /* Wraps content for responsiveness */
   overflow: hidden; /* Prevents horizontal scroll */
+  opacity: 0; /* Start hidden */
+  transform: translateX(50px); /* Start position to the right */
+  animation: slideInRight 0.8s forwards; /* Animation for the navbar */
 }
+
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0; /* Start hidden */
+    transform: translateX(50px); /* Start position to the right */
+  }
+  50% {
+    transform: translateX(10px); /* Shake effect */
+  }
+  100% {
+    opacity: 1; /* Fade in */
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+.navbar .logo,
+.nav-links,
+.search-bar,
+.hamburger {
+  opacity: 0; /* Start hidden */
+  transform: translateX(50px); /* Start position to the right */
+  animation: slideInRight 0.8s forwards; /* Animation for each navbar element */
+}
+
+
 /* Logo */
 .navbar .logo {
   font-size: 1.5rem;
@@ -42,6 +71,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  animation-delay: 0.2s; /* Delay for logo */
 }
 
 .navbar .logo img {
@@ -57,6 +87,7 @@ body {
   gap: 20px;
   flex-shrink: 0;
   margin-right: 30px;
+  animation-delay: 0.4s; /* Delay for nav links */
 }
 
 .nav-links a {
@@ -80,6 +111,7 @@ body {
   margin-right: 20px;
   flex-grow: 1; /* Allows the search bar to adapt */
   max-width: 300px; /* Limits the size */
+  animation-delay: 0.6s; /* Delay for search bar */
 }
 
 .search-bar input {
@@ -107,6 +139,7 @@ body {
   position: absolute; /* Position it absolutely within the navbar */
   top: 15px; /* Align it with the navbar padding */
   right: 32px; /* Adjust to ensure it fits within the viewport */
+  animation-delay: 0.8s; /* Delay for hamburger */
 }
 
 .hamburger span {
@@ -352,6 +385,16 @@ select:hover {
   height: 70vh; /* Set height to 80% of the viewport height */
   margin: 5% 0; /* Reduced margin to 5% at the top and bottom */
   width: 85vw;
+  opacity: 0; /* Start hidden */
+  transform: translateY(-50px); /* Start position above */
+  animation: slideDown 1s forwards; /* Animation for the container */
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to original position */
+  }
 }
 
 .panda-image {
@@ -361,8 +404,19 @@ select:hover {
   align-items: center; /* Center vertically */
   margin: 0;
   padding: 0;
-  
+  opacity: 0; /* Start hidden */
+  transform: translateX(-50px); /* Start position to the left */
+  animation: slideInLeft 1s forwards; /* Animation for the panda image */
+  animation-delay: 0.5s; /* Delay for the panda image */
 }
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1; /* Fade in */
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
 
 .panda-image img {
   width: 400px; /* Set the width to 400px */
@@ -402,12 +456,41 @@ select:hover {
   align-items: center; /* Center items horizontally */
   justify-content: center; /* Center items vertically */
   text-align: center; /* Center text */
+  opacity: 0; /* Start hidden */
+  transform: translateX(50px); /* Start position to the right */
+  animation: slideInRight 1s forwards; /* Animation for the text content */
+  animation-delay: 1s; /* Delay for the text content */
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1; /* Fade in */
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+.text-content h2,
+.text-content p,
+.button-container {
+  opacity: 0; /* Start hidden */
+  transform: translateX(50px); /* Start position to the right */
+  animation: slideInRight 1s forwards; /* Animation for the text content */
+  animation-delay: 1s; /* Delay for the text content */
+}
+
+.text-content h2 {
+  animation-delay: 1s; /* Delay for heading */
+}
+
+.text-content p {
+  animation-delay: 1.5s; /* Delay for description */
 }
 
 .button-container {
   display: flex;
   align-items: center;
   margin-top: 20px; /* Add space above the button */
+  animation-delay: 2s; /* Delay for button */
 }
 
 .get-started-button {
