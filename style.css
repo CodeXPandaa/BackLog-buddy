@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
 * {
   box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
@@ -301,5 +304,160 @@ select:hover {
 
   .footer-contact {
     text-align: left; /* Align text to the left */
+  }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.get-started-container {
+  display: flex; /* Use flexbox to create two columns */
+  padding: 0px 20px 0px 0px;
+  background-color: #f9f9f9; /* Light background color */
+  border: 1px solid #ddd; /* Optional border */
+  border-radius: 8px; /* Rounded corners */
+  height: 70vh; /* Set height to 80% of the viewport height */
+  margin: 5% 0; /* Reduced margin to 5% at the top and bottom */
+  width: 85vw;
+}
+
+.panda-image {
+  flex: 1; /* Take up one part of the container */
+  display: flex; /* Center the image */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 0;
+  padding: 0;
+  
+}
+
+.panda-image img {
+  width: 400px; /* Set the width to 400px */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 0; /* Adjust top margin */
+  margin-bottom: 0; /* Adjust bottom margin */
+  margin-left: 0; /* Adjust left margin */
+  padding-top: 0; /* Adjust top padding */
+  padding-bottom: 0; /* Adjust bottom padding */
+  padding-left: 0; /* Adjust left padding */
+  padding-right: 0; /* Adjust right padding if needed */
+
+}
+
+.h2 {
+  font-family: "Oswald";
+  font-optical-sizing: auto;
+  font-size: 80px;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+#discription-p {
+  font-family: "Oswald";
+  font-optical-sizing: auto;
+  font-size: 29px;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 0;
+}
+.text-content {
+  flex: 1; /* Take up the other part of the container */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  text-align: center; /* Center text */
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px; /* Add space above the button */
+}
+
+.get-started-button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Button color */
+  color: white; /* Text color */
+  text-decoration: none; /* No underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.get-started-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .get-started-container {
+    flex-direction: column; /* Stack items vertically */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .panda-image img {
+    width: 100%; /* Make the image responsive */
+    max-width: 300px; /* Limit the maximum width */
+  }
+
+  .h2 {
+    font-size: 50px; /* Adjust font size for smaller screens */
+  }
+
+  #discription-p {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .button-container {
+    justify-content: center; /* Center the button */
+  }
+}
+
+@media (max-width: 480px) {
+  .h2 {
+    font-size: 40px; /* Further adjust font size for very small screens */
+  }
+
+  #discription-p {
+    font-size: 18px; /* Further adjust font size for very small screens */
   }
 }
