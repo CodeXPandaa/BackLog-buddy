@@ -514,13 +514,7 @@ select:hover {
 .panda-image img {
   width: 400px; /* Set the width to 400px */
   height: auto; /* Maintain aspect ratio */
-  margin-top: 0; /* Adjust top margin */
-  margin-bottom: 0; /* Adjust bottom margin */
-  margin-left: 0; /* Adjust left margin */
-  padding-top: 0; /* Adjust top padding */
-  padding-bottom: 0; /* Adjust bottom padding */
-  padding-left: 0; /* Adjust left padding */
-  padding-right: 0; /* Adjust right padding if needed */
+
 }
 
 .h2 {
